@@ -23,14 +23,14 @@ public class SecurityConfig {
         return http.build();
     }
 
-
-
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.addAllowedOriginPattern("*"); // o mejor tu dominio exacto
+        configuration.addAllowedOrigin("https://storage.googleapis.com"); // dominio del bucket
+        configuration.addAllowedOrigin("http://localhost:4200"); // para desarrollo en Angular local
         configuration.addAllowedMethod("*");
         configuration.addAllowedHeader("*");
+        configuration.setAllowCredentials(true); // si en el futuro usas cookies o auth
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
