@@ -28,13 +28,21 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// Cloud SQL SocketFactory para Postgres
+	implementation 'com.google.cloud.sql:postgres-socket-factory:1.16.1'
+
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	runtimeOnly 'org.postgresql:postgresql'
+
+	// Driver PostgreSQL
+	runtimeOnly 'org.postgresql:postgresql:42.7.2'
+
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
+
 
 bootJar {
 	archiveBaseName.set("ledgerly")
