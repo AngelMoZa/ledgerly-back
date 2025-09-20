@@ -16,7 +16,7 @@ public class CorsConfig {
                 registry.addMapping("/**")
                         .allowedOrigins(
                                 "http://localhost:4200", // Angular en local
-                                "https://storage.googleapis.com/ledgerly-frontend-bucket" // Angular en producción
+                                "https://storage.googleapis.com" // Angular en producción
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowCredentials(true);
