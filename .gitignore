@@ -48,3 +48,4 @@ Thumbs.db
 # Archivos temporales
 *.tmp
 *.swp
+/src/main/resources/application-dev.yml
