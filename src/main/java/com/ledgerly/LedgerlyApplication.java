@@ -8,6 +8,8 @@ public class LedgerlyApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LedgerlyApplication.class, args);
+
+		System.out.println("Hola mundo");
 	}
 
 }
